@@ -1,0 +1,11 @@
+<Directory /var/www/>
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride all
+        Order allow,deny
+        allow from all
+</Directory>
+
+
+Options -MultiViews
+RewriteEngine On
+ReWriteRule ^([a-zA-Z0-9\-]+)$ index.php?page=$1 [L,NC]
